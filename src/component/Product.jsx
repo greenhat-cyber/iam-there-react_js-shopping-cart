@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 function Product() {
 
@@ -45,6 +45,9 @@ function Product() {
                     </p>
                     <h3 className="display-6 fw-bold my-4">${product.price}</h3>
                     <p className='lead' >{ product.description }</p>
+
+                    <button className='btn btn-outline-dark px-4 py-2 ' > Add to Cart </button>
+                    <NavLink className='btn btn-outline-dark ms-2 px-3 py-2 ' to='/cart ' > Go to Cart </NavLink>
 
                     
                 </div>
