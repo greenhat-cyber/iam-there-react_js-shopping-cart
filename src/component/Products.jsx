@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Skeleton from 'react-loading-skeleton'
+// import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { NavLink } from 'react-router-dom'
 
 
 function Products() {
@@ -14,12 +15,12 @@ function Products() {
 
         const getProducts = async () => {
             setLoading(true);
-            const respones = await fetch("https://fakestoreapi.com/products");
+            const respones = await fetch("https://fakestoreapi.com/products"); //https://fakestoreapi.com/products  //https://api.storerestapi.com/products
             if (componentMounted) {
                 setData(await respones.clone().json())
                 setFilter(await respones.json())
                 setLoading(false);
-                
+
             }
 
             return () => {
@@ -32,8 +33,20 @@ function Products() {
     const Loading = () => {
         return (
             <>
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
 
-                <div className="col-md-3">
+                {/* <div className="col-md-3">
                     <Skeleton height={350} />
                 </div>
                 <div className="col-md-3">
@@ -44,14 +57,14 @@ function Products() {
                 </div>
                 <div className="col-md-3">
                     <Skeleton height={350} />
-                </div>
+                </div> */}
 
             </>
         );
     };
 
     const filterProduct = (cat) => {
-        const updatedList = data.filter((x)=>x.category === cat);
+        const updatedList = data.filter((x) => x.category === cat);
         setFilter(updatedList);
     }
 
@@ -61,25 +74,25 @@ function Products() {
         return (
             <>
                 <div className="buttons d-flex justify-content-center mb-5 pb-5 ">
-                    <div className="button btn btn-outline-dark me-2 " onClick={()=>{
+                    <div className="button btn btn-outline-dark me-2 " onClick={() => {
                         setFilter(data)
                     }} >All</div>
-                    <div className="button btn btn-outline-dark me-2" onClick={()=> filterProduct("men's clothing") }  >Men's Clothing</div>
-                    <div className="button btn btn-outline-dark me-2" onClick={()=> filterProduct("women's clothing") } >Women's Clothing  </div>
-                    <div className="button btn btn-outline-dark me-2" onClick={()=> filterProduct("jewelery") } >Jewelery  </div>
-                    <div className="button btn btn-outline-dark me-2" onClick={()=> filterProduct("electronics") } >Electronics  </div>
+                    <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("men's clothing")}  >Men's Clothing</div>
+                    <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("women's clothing")} >Women's Clothing  </div>
+                    <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("jewelery")} >Jewelery  </div>
+                    <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("electronics")} >Electronics  </div>
                 </div>
                 {filter.map((product) => {
                     return (
                         <>
-                            <div className="col-md-3 mb4">
-                                <div className="card h-100 text-center p-4" key={product.id}>
+                            <div className="col-md-3 mb-4 pb-1">
+                                <div className="card h-100 text-center p-4 " key={product.id}>
                                     <img src={product.image} className="card-img-top" alt={product.title} height='250px' />
-                                        <div className="card-body">
-                                            <h5 className="card-title mb-0 ">{product.title.substring(0,12)}...</h5>
-                                            <p className="card-text lead fw-bold ">${product.price}</p>
-                                            <a href="www" className="btn btn-outline-dark">Bu Now</a>
-                                        </div>
+                                    <div className="card-body">
+                                        <h5 className="card-title mb-0 ">{product.title.substring(0, 12)}...</h5>
+                                        <p className="card-text lead fw-bold ">${product.price}</p>
+                                        <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark">Bu Now</NavLink>
+                                    </div>
                                 </div>
                             </div>
                         </>
