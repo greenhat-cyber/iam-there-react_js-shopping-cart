@@ -33,17 +33,17 @@ function Products() {
     const Loading = () => {
         return (
             <>
-                <div class="spinner-grow text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
-                <div class="spinner-grow text-secondary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-secondary" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
-                <div class="spinner-grow text-success" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-success" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
-                <div class="spinner-grow text-danger" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-danger" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
 
                 {/* <div className="col-md-3">
@@ -91,7 +91,7 @@ function Products() {
                                     <div className="card-body">
                                         <h5 className="card-title mb-0 ">{product.title.substring(0, 12)}...</h5>
                                         <p className="card-text lead fw-bold ">${product.price}</p>
-                                        <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark">Bu Now</NavLink>
+                                        <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark">Buy Now</NavLink>
                                     </div>
                                 </div>
                             </div>
