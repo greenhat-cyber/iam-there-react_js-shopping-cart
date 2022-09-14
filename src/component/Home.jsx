@@ -7,14 +7,14 @@ function Home() {
 
             <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    <div className="carousel-item active" data-bs-interval="2000">
-                        <img src="/assets/slider-4.jpg" className="d-block w-100" alt="..." />
+                    <div className="carousel-item active" data-bs-intervel="1000">
+                        <img src="/assets/slider-4.jpg" className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-item" data-bs-interval="2000">
-                        <img src="/assets/slider-5.jpg" className="d-block w-100" alt="..." />
+                    <div className="carousel-item" data-bs-intervel="1000">
+                        <img src="/assets/slider-5.jpg" className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-item" data-bs-interval="2000">
-                        <img src="/assets/slider-6.jpg" className="d-block w-100" alt="..." />
+                    <div className="carousel-item" data-bs-intervel="1000">
+                        <img src="/assets/slider-6.jpg" className="d-block w-100" alt="..."/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -32,3 +32,4 @@ function Home() {
 }
 
 export default Home
+
