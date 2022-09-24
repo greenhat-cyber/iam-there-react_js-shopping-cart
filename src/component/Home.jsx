@@ -7,13 +7,13 @@ function Home() {
 
             <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    <div className="carousel-item active" data-bs-intervel="1000">
+                    <div className="carousel-item active"data-bs-interval="2000">
                         <img src="/assets/slider-4.jpg" className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-item" data-bs-intervel="1000">
+                    <div className="carousel-item" data-bs-interval="2000">
                         <img src="/assets/slider-5.jpg" className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-item" data-bs-intervel="1000">
+                    <div className="carousel-item" data-bs-interval="2000">
                         <img src="/assets/slider-6.jpg" className="d-block w-100" alt="..."/>
                     </div>
                 </div>
@@ -33,3 +33,5 @@ function Home() {
 
 export default Home
 
+
+// src="/assets/slider-4.jpg"
