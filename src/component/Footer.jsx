@@ -4,7 +4,7 @@ import "./Footer.css"
 function Footer() {
     return (
 
-        <div className="container-fluid background">
+        <div className="container-fluid background ">
             <div className="row background align10">
 
                 <div className="card10 col-12">

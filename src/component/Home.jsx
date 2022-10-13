@@ -32,6 +32,3 @@ function Home() {
 }
 
 export default Home
-
-
-// src="/assets/slider-4.jpg"

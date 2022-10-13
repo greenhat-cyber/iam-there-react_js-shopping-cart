@@ -1,11 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useState } from 'react';
 
 function Navbar() {
 
     const { cartCount } = useSelector((state) => state.cart);
-    console.log(cartCount);
+    const [search, setSearch] = useState("")
+    console.log(search);
 
     return (
         <>
@@ -34,8 +36,7 @@ function Navbar() {
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-dark me-2" type="submit">Search</button>
+                            <input class="form-control me-5" onChange={(e)=> setSearch(e.target.value) } type="search" placeholder="Search here" aria-label="Search" />
                         </form>
                         <div className="buttons">
                             <NavLink to="https://" className="btn btn-outline-dark">

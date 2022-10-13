@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 // import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { NavLink } from 'react-router-dom'
+import Footer from './Footer'
 import "./Products.css"
 
 
@@ -121,6 +122,7 @@ function Products() {
 
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
