@@ -1,3 +1,7 @@
 .card-d{
     border: none;
 }
+
+.card-d:hover{
+    transform: scale(0.9);
+}
