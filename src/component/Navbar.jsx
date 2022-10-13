@@ -1,10 +1,10 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 function Navbar() {
 
-    const {cartCount} = useSelector((state) => state.cart);
+    const { cartCount } = useSelector((state) => state.cart);
     console.log(cartCount);
 
     return (
@@ -33,13 +33,17 @@ function Navbar() {
                                 <NavLink className="nav-link" to="/contacts">Contact</NavLink>
                             </li>
                         </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-dark me-2" type="submit">Search</button>
+                        </form>
                         <div className="buttons">
-                            <NavLink to="https://" className="btn btn-outline-dark"> 
-                           <i className="fa fa-sign-in me-1"></i> Login</NavLink>
-                            <NavLink to="https://" className="btn btn-outline-dark ms-2"> 
-                           <i className="fa fa-user-plus me-1"></i> Register</NavLink>
-                            <NavLink to="/cart" className="btn btn-outline-dark ms-2"> 
-                           <i className="fa fa-shopping-cart me-1"></i> Cart ({cartCount})</NavLink>
+                            <NavLink to="https://" className="btn btn-outline-dark">
+                                <i className="fa fa-sign-in me-1"></i> Login</NavLink>
+                            <NavLink to="https://" className="btn btn-outline-dark ms-2">
+                                <i className="fa fa-user-plus me-1"></i> Register</NavLink>
+                            <NavLink to="/cart" className="btn btn-outline-dark ms-2">
+                                <i className="fa fa-shopping-cart me-1"></i> Cart ({cartCount})</NavLink>
                         </div>
                     </div>
                 </div>

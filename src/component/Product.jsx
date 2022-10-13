@@ -45,7 +45,7 @@ function Product() {
                     <img src={product.image} alt={product.title} height="400px" width='400px' />
 
                 </div>
-                <div className="col-md-4 mt-5">
+                <div className="col-md-4 mt-5 mb-5">
                     <h4 className='text-uppercase text-black-50' >
                         {product.category}
                     </h4>
