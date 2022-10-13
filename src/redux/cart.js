@@ -14,9 +14,11 @@ const cartSlice = createSlice({
         },
         increment: (state) => {
             state.cartCount += 1;
+            console.log(state);
         },
         decrement: (state) => {
             state.cartCount -= 1;
+            
         }
     }
 

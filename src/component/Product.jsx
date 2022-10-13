@@ -20,9 +20,10 @@ function Product() {
             setLoading(false);
         }
         getProduct()
+        // eslint-disable-next-line
     }, [])
 
-    
+
     const Loading = () => {
         return (
             <>
@@ -61,6 +62,7 @@ function Product() {
 
 
                 </div>
+            
             </>
         )
     }

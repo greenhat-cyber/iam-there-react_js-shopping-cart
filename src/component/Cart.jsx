@@ -18,6 +18,7 @@ function Cart() {
 
     }
     getProduct()
+    // eslint-disable-next-line
   }, [])
 
 
