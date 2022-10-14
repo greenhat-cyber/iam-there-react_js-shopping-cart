@@ -35,8 +35,8 @@ function Navbar() {
                                 <NavLink className="nav-link" to="/contacts">Contact</NavLink>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-5" onChange={(e)=> setSearch(e.target.value) } type="search" placeholder="Search here" aria-label="Search" />
+                        <form className="d-flex">
+                            <input className="form-control me-5" onChange={(e)=> setSearch(e.target.value) } type="search" placeholder="Search here" aria-label="Search" />
                         </form>
                         <div className="buttons">
                             <NavLink to="https://" className="btn btn-outline-dark">

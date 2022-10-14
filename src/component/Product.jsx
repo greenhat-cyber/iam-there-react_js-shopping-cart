@@ -57,7 +57,7 @@ function Product() {
                     <h3 className="display-6 fw-bold my-4">${product.price}</h3>
                     <p className='lead' >{product.description}</p>
 
-                    <NavLink to={`/cart/${product.id}`} ><button className='btn btn-outline-dark px-4 py-2 ' onClick={() => dispatch(addToCart())}> Add to Cart </button></NavLink>
+                    <NavLink to={`/cart/${product.id}`} ><button className='btn btn-outline-dark px-4 py-2 ' onClick={() => dispatch(addToCart(product))}> Add to Cart </button></NavLink>
                     <NavLink className='btn btn-outline-dark ms-2 px-3 py-2 ' to='/cart ' > Go to Cart </NavLink>
 
 

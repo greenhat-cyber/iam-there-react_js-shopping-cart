@@ -82,16 +82,16 @@ function Products() {
                     <div className="button btn btn-outline-dark me-2 " onClick={() => {
                         setFilter(data)
                     }} >All</div>
-                    <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("men's clothing")}  >Men's Clothing</div>
                     <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("women's clothing")} >Women's Clothing  </div>
+                    <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("men's clothing")}  >Men's Clothing</div>
                     <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("jewelery")} >Jewelery  </div>
                     <div className="button btn btn-outline-dark me-2" onClick={() => filterProduct("electronics")} >Electronics  </div>
                 </div>
                 {filter.map((product) => {
                     return (
-                        <>
-                            <div className="col-md-3 mb-4 pb-1">
-                                <div className="card h-100 text-center p-4 shadow-lg card-d " key={product.id}>
+                        
+                            <div className="col-md-3 mb-4 pb-1" key={product.id}>
+                                <div className="card h-100 text-center p-4 shadow-lg card-d " >
                                     <img src={product.image} className="card-img-top" alt={product.title} height='250px' />
                                     <div className="card-body">
                                         <h5 className="card-title mb-0 ">{product.title.substring(0, 12)}...</h5>
@@ -100,7 +100,7 @@ function Products() {
                                     </div>
                                 </div>
                             </div>
-                        </>
+                        
                     )
                 })}
             </>
