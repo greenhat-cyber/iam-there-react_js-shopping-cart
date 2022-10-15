@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom'
 import { addToCart } from '../redux/cart';
+import Footer from "./Footer"
 
 
 function Product() {
@@ -73,6 +74,7 @@ function Product() {
                     {loading ? <Loading /> : <ShowProduct />}
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
